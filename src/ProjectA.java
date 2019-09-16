@@ -4,12 +4,20 @@ public class ProjectA
 {
 	public static void main(String[] args) 
 	{
-		Scanner userInput = new Scanner(System.in);
-		System.out.println("Input any two words seperated by a space. I will print as a proper varriable name.");
+		Scanner stringInput = new Scanner(System.in);
+		System.out.println("Input any two words seperated by a space. I will print it as a proper varriable name.");
 		
-		String words = userInput.nextLine();
-		words = words.substring(0,1).toLowerCase().substring(1).toLowerCase().replace(" ", "")+ words.substring(0,1).toUpperCase().substring(1).toLowerCase();
-		
-		System.out.println(words);
+		String words = stringInput.nextLine();
+		 words = words.trim();
+		   
+		  int space = words.indexOf(" ");
+		  int len   = words.length();
+		   
+		  String first = words.substring(0, space);
+		  String last = words.substring(space);
+		   
+		  System.out.println();
+		   
+		  System.out.println(first.toLowerCase() +last.replace(" ", "").toUpperCase());
 	}
 }
