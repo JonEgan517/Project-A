@@ -14,10 +14,10 @@ public class ProjectA
 		  int len   = words.length();
 		   
 		  String first = words.substring(0, space);
-		  String last = words.substring(space);
-		   
-		  System.out.println();
-		   
-		  System.out.println(first.toLowerCase() +last.replace(" ", "").toUpperCase());
+		  
+		  String last = words.substring(space , words.length());
+		  System.out.println(first );
+		  System.out.println(last);
+		  System.out.println(first.toLowerCase() +last.substring(1,2).toUpperCase() + last.substring(2,4));
 	}
 }
